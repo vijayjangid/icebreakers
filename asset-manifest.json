@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/icebrekers/memory/static/css/main.c85d18b2.css",
+    "main.js": "/icebrekers/memory/static/js/main.3e2f3d05.js",
+    "static/js/787.051c4384.chunk.js": "/icebrekers/memory/static/js/787.051c4384.chunk.js",
+    "index.html": "/icebrekers/memory/index.html",
+    "main.c85d18b2.css.map": "/icebrekers/memory/static/css/main.c85d18b2.css.map",
+    "main.3e2f3d05.js.map": "/icebrekers/memory/static/js/main.3e2f3d05.js.map",
+    "787.051c4384.chunk.js.map": "/icebrekers/memory/static/js/787.051c4384.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c85d18b2.css",
+    "static/js/main.3e2f3d05.js"
+  ]
+}
