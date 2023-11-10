@@ -172,3 +172,22 @@
 .hidden {
   display: none;
 }
+
+.score-history {
+  font-style: italic;
+  font-size: 1rem;
+  color:rgb(104, 125, 142);
+  display:flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  align-items: baseline;
+}
+.score-history span:first-of-type {
+  font-size: 1.5rem;
+}
+.score-history .max-score {
+  color:#04d964
+}
+.score-history .min-score {
+  color:#d90429
+}
