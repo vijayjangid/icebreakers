@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/icebrekers/static/css/main.c85d18b2.css",
-    "main.js": "/icebrekers/static/js/main.bee41b22.js",
-    "static/js/787.051c4384.chunk.js": "/icebrekers/static/js/787.051c4384.chunk.js",
-    "index.html": "/icebrekers/index.html",
-    "main.c85d18b2.css.map": "/icebrekers/static/css/main.c85d18b2.css.map",
-    "main.bee41b22.js.map": "/icebrekers/static/js/main.bee41b22.js.map",
-    "787.051c4384.chunk.js.map": "/icebrekers/static/js/787.051c4384.chunk.js.map"
+    "main.css": "/icebreakers/static/css/main.c85d18b2.css",
+    "main.js": "/icebreakers/static/js/main.4790e575.js",
+    "static/js/787.051c4384.chunk.js": "/icebreakers/static/js/787.051c4384.chunk.js",
+    "index.html": "/icebreakers/index.html",
+    "main.c85d18b2.css.map": "/icebreakers/static/css/main.c85d18b2.css.map",
+    "main.4790e575.js.map": "/icebreakers/static/js/main.4790e575.js.map",
+    "787.051c4384.chunk.js.map": "/icebreakers/static/js/787.051c4384.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c85d18b2.css",
-    "static/js/main.bee41b22.js"
+    "static/js/main.4790e575.js"
   ]
 }
