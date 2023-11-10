@@ -1,0 +1,87 @@
+{
+    "monkey face": [
+      { "id": "eyes", "content": "🙈" },
+      { "id": "ears", "content": "🙉" },
+      { "id": "mouth", "content": "🙊" },
+      { "id": "normal", "content": "🐵" }
+    ],
+    "colorful hearts": [
+      { "id": "eyes", "content": "💛" },
+      { "id": "ears", "content": "💜" },
+      { "id": "mouth", "content": "🤍" },
+      { "id": "normal", "content": "🖤" }
+    ],
+    "hearts": [
+      { "id": "eyes", "content": "💓" },
+      { "id": "ears", "content": "💕" },
+      { "id": "mouth", "content": "💝" },
+      { "id": "normal", "content": "💘" }
+    ],
+    "devils": [
+      { "id": "eyes", "content": "😈" },
+      { "id": "ears", "content": "💀" },
+      { "id": "mouth", "content": "👹" },
+      { "id": "normal", "content": "👻" }
+    ],
+    "smiley": [
+      { "id": "eyes", "content": "🤣" },
+      { "id": "ears", "content": "😵‍💫" },
+      { "id": "mouth", "content": "😤" },
+      { "id": "normal", "content": "🤪" }
+    ],
+    "hands": [
+      { "id": "eyes", "content": "👋" },
+      { "id": "ears", "content": "🙌" },
+      { "id": "mouth", "content": "👍" },
+      { "id": "normal", "content": "🙏" }
+    ],
+    "body parts": [
+      { "id": "eyes", "content": "🧠" },
+      { "id": "ears", "content": "🦷" },
+      { "id": "mouth", "content": "👁" },
+      { "id": "normal", "content": "👅" }
+    ],
+    "professions": [
+      { "id": "eyes", "content": "👩‍🌾" },
+      { "id": "ears", "content": "👩‍🎓" },
+      { "id": "mouth", "content": "👩‍🍳" },
+      { "id": "normal", "content": "👩‍🚀" }
+    ],
+    "wild mammals": [
+      { "id": "eyes", "content": "🦓" },
+      { "id": "ears", "content": "🦏" },
+      { "id": "mouth", "content": "🐘" },
+      { "id": "normal", "content": "🦒" }
+    ],
+    "animojies": [
+      { "id": "eyes", "content": "🐻" },
+      { "id": "ears", "content": "🐼" },
+      { "id": "mouth", "content": "🐯" },
+      { "id": "normal", "content": "🐷" }
+    ],
+    "musical instruments": [
+      { "id": "eyes", "content": "🎹" },
+      { "id": "ears", "content": "🎻" },
+      { "id": "mouth", "content": "🥁" },
+      { "id": "normal", "content": "🎺" }
+    ],
+    "clothing": [
+      { "id": "eyes", "content": "👗" },
+      { "id": "ears", "content": "🥻" },
+      { "id": "mouth", "content": "👘" },
+      { "id": "normal", "content": "🧥" }
+    ],
+    "footwears": [
+      { "id": "eyes", "content": "🩴" },
+      { "id": "ears", "content": "🥾" },
+      { "id": "mouth", "content": "👠" },
+      { "id": "normal", "content": "👡" }
+    ],
+    "caps": [
+      { "id": "eyes", "content": "🎩" },
+      { "id": "ears", "content": "👒" },
+      { "id": "mouth", "content": "🎓" },
+      { "id": "normal", "content": "🧢" }
+    ]
+  }
+  
