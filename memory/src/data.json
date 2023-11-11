@@ -11,12 +11,6 @@
       { "id": "mouth", "content": "🙊" },
       { "id": "normal", "content": "🐵" }
     ],
-    "colorful hearts": [
-      { "id": "eyes", "content": "💛" },
-      { "id": "ears", "content": "💜" },
-      { "id": "mouth", "content": "🤍" },
-      { "id": "normal", "content": "🖤" }
-    ],
     "hearts": [
       { "id": "eyes", "content": "💓" },
       { "id": "ears", "content": "💕" },
@@ -84,7 +78,7 @@
       { "id": "normal", "content": "👡" }
     ],
     "caps": [
-      { "id": "eyes", "content": "🎩" },
+      { "id": "eyes", "content": "🪖" },
       { "id": "ears", "content": "👒" },
       { "id": "mouth", "content": "🎓" },
       { "id": "normal", "content": "🧢" }
