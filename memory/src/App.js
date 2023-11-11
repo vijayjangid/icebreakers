@@ -4,7 +4,7 @@ import data from "./data.json";
 import DB from './localStorage.js';
 
 const { getScoresHistory, saveScoresHistory, getEmojiSet, saveEmojiSet, clear } = DB;
-clear();
+// clear();
 
 const urlParams = new URLSearchParams(window.location.search);
 const DEBUG = !!urlParams.get("debug");
