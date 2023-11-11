@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" >
   </a>
 
   <h3 align="center">Memory Game</h3>
@@ -18,7 +18,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://vijayjangid.github.io/icebreakers/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<a href="#readme-top">back to top</a>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
