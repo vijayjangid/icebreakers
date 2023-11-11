@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import data from "./data.json";
 import DB from './localStorage.js';
+import Tile from "./components/Tile/index.js";
+import Dropdown from "./components/Dropdown/index.js";
 
 const { getScoresHistory, saveScoresHistory, getEmojiSet, saveEmojiSet, clear } = DB;
 // clear();
 
-const urlParams = new URLSearchParams(window.location.search);
-const DEBUG = !!urlParams.get("debug");
+
 
 const EMOJI_SETS = Object.keys(data);
 
@@ -176,61 +177,32 @@ function App() {
           <span>mem</span>
           <span>🔥 ry</span>
         </span>
-        <div className="dropdown">
-          <button className="dropbtn" onClick={() => setOpenDropdown(true)}>
-            {data[emojiSet]?.map((y) => y.content + " ")} <span>▼</span>
-          </button>
-          <div className={`dropdown-content ${openDropdown ? "" : "hidden"}`}>
-            {EMOJI_SETS.map((x) => (
-              <button
-                key={x}
-                onClick={() => {
-                  setEmojiSet(x);
-                  saveEmojiSet(x);
-                  setOpenDropdown(false);
-                }}
-              >
-                {data[x].map((y) => y.content + " ")}
-              </button>
-            ))}
-          </div>
-        </div>
+        <Dropdown
+          open={openDropdown}
+          onClick={() => setOpenDropdown(true)}
+          items={EMOJI_SETS}
+          selectedItem={emojiSet}
+          onChange={(x) => {
+            setEmojiSet(x);
+            saveEmojiSet(x);
+            setOpenDropdown(false);
+          }}
+          data={data}
+        />
       </header>
       <>
         <div className="game-screen-wrapper">
           {gameStatus !== GAME_STATUS.reloading && (
             <div className="game-screen">
               {tiles?.map((x) => (
-                <div
+                <Tile
                   key={x.key}
-                  className={`flip-card ${x.guessed ||
-                    x.key === firstGuess?.key ||
-                    x.key === secondGuess?.key
-                    ? "flipped"
-                    : ""
-                    } ${x.guessed ? "guessed" : ""} ${x.bombed && bombed ? "bombed" : ""
-                    }`}
+                  data={x}
+                  firstGuessKey={firstGuess?.key}
+                  secondGuessKey={secondGuess?.key}
+                  bombed={bombed}
                   onClick={() => handleClick(x)}
-                  role="button"
-                  aria-label={x.id}
-                  aria-disabled={x.guessed || x.bombed}
-                >
-                  <div className="card-inner">
-                    <div className="card-front">{DEBUG ? x.content : "?"}</div>
-                    <div className="card-back">
-                      <span>{bombed && x.bombed ? "🔥" : !bombed && x.bombed ? "🎉" : x.content}</span>
-                      <span className={`card-score`}>
-                        {bombed && x.bombed
-                          ? "0"
-                          : !bombed && x.bombed
-                            ? "+20"
-                            : x.guessed
-                              ? "+10"
-                              : ""}
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                />
               ))}
             </div>
           )}
@@ -247,7 +219,7 @@ function App() {
             )}
             <div className="score">{totalScore}</div>
             <div className="score-history">{
-              scoreHistory?.map((x, index) => <span className={x === 100 ? 'max-score' : x === 20 ? 'min-score' : ''}>{x}{index === scoreHistory.length - 1 ? '' : `,`}</span>)
+              scoreHistory?.map((x, index) => <span key={`${index} ${x}`} className={x === 100 ? 'max-score' : x === 20 ? 'min-score' : ''}>{x}{index === scoreHistory.length - 1 ? '' : `,`}</span>)
             }</div>
           </div>
         )}
