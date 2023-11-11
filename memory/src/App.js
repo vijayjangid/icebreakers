@@ -3,8 +3,8 @@ import "./App.css";
 import data from "./data.json";
 import DB from './localStorage.js';
 
-const { getScoresHistory, saveScoresHistory, getEmojiSet, saveEmojiSet } = DB;
-
+const { getScoresHistory, saveScoresHistory, getEmojiSet, saveEmojiSet, clear } = DB;
+// clear();
 
 const urlParams = new URLSearchParams(window.location.search);
 const DEBUG = !!urlParams.get("debug");
@@ -143,6 +143,7 @@ function App() {
     const calculatedScore = tiles.reduce((prev, curr) => {
       if (curr.guessed) prev += 10;
       if (curr.guessed && curr.bombed && bombed) prev -= 10;
+      if (curr.guessed && curr.bombed && !bombed) prev += 10;
       return prev;
     }, 0);
     setTotalScore(
@@ -220,7 +221,7 @@ function App() {
                         {bombed && x.bombed
                           ? "0"
                           : !bombed && x.bombed
-                            ? "+10"
+                            ? "+20"
                             : x.guessed
                               ? "+10"
                               : ""}
@@ -244,7 +245,7 @@ function App() {
             )}
             <div className="score">{totalScore}</div>
             <div className="score-history">{
-              scoreHistory?.map((x, index) => <span className={x === 90 ? 'max-score' : x === 20 ? 'min-score' : ''}>{x}{index === scoreHistory.length - 1 ? '' : `,`}</span>)
+              scoreHistory?.map((x, index) => <span className={x === 100 ? 'max-score' : x === 20 ? 'min-score' : ''}>{x}{index === scoreHistory.length - 1 ? '' : `,`}</span>)
             }</div>
           </div>
         )}
