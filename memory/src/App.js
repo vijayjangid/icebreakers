@@ -213,9 +213,9 @@ function App() {
                   aria-disabled={x.guessed || x.bombed}
                 >
                   <div className="card-inner">
-                    <div className="card-front">{DEBUG ? x.content : "❓"}</div>
+                    <div className="card-front">{DEBUG ? x.content : "?"}</div>
                     <div className="card-back">
-                      <span>{x.bombed ? "🔥" : x.content}</span>
+                      <span>{bombed && x.bombed ? "🔥" : !bombed && x.bombed ? "🎉": x.content}</span>
                       <span className={`card-score`}>
                         {bombed && x.bombed
                           ? "0"
@@ -236,12 +236,12 @@ function App() {
           <div className="scoreboard">
             <h2 className="game-status">
               {gameStatus}
-              {gameStatus === GAME_STATUS.over && (
-                <button className="btn-reset" onClick={handleReset}>
-                  🔄
-                </button>
-              )}
             </h2>
+            {gameStatus === GAME_STATUS.over && (
+              <button className="btn-reset" onClick={handleReset}>
+                🔄
+              </button>
+            )}
             <div className="score">{totalScore}</div>
             <div className="score-history">{
               scoreHistory?.map((x, index) => <span className={x === 90 ? 'max-score' : x === 20 ? 'min-score' : ''}>{x}{index === scoreHistory.length - 1 ? '' : `,`}</span>)
