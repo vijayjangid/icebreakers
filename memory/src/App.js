@@ -4,21 +4,25 @@ import data from "./data.json";
 import DB from './localStorage.js';
 
 const { getScoresHistory, saveScoresHistory, getEmojiSet, saveEmojiSet, clear } = DB;
-// clear();
+clear();
 
 const urlParams = new URLSearchParams(window.location.search);
 const DEBUG = !!urlParams.get("debug");
 
 const EMOJI_SETS = Object.keys(data);
 
-const resetTiles = (emojis) => {
+const resetTiles = (emojiSet) => {
+  let emojiSetRandom = emojiSet;
+  if (emojiSet === 'random') {
+    emojiSetRandom = EMOJI_SETS.slice(1)[Math.floor(Math.random() * (EMOJI_SETS.length - 1))]
+  }
   const initialTiles = [
-    ...data[emojis],
-    ...data[emojis],
+    ...data[emojiSetRandom],
+    ...data[emojiSetRandom],
     { id: "bomb", content: "🔥", bombed: true },
   ];
   return initialTiles
-    .sort((x) => Math.random() - 0.5)
+    .sort(() => Math.random() - 0.5)
     .map((x, index) => ({ ...x, key: index /* guessed: true */ }));
 };
 
@@ -46,7 +50,6 @@ function App() {
 
   // Reset entire game and game stats
   const resetGame = (newEmojiSet) => {
-    console.log('reseting game');
     setFirstGuess(null);
     setSecondGuess(null);
     setBombed(null);
@@ -156,11 +159,10 @@ function App() {
   }, [tiles, bombed]);
 
   useEffect(() => {
-    if (gameStatus === GAME_STATUS.over && (!bombed && totalScore === 100 || bombed)) {
-      console.log('setting score history', totalScore, gameStatus);
+    if (gameStatus === GAME_STATUS.over && ((!bombed && totalScore === 100) || bombed)) {
       setScoreHistory(prev => Array.isArray(prev) ? [totalScore, ...prev].slice(0, 20) : [totalScore]);
     }
-  }, [totalScore, gameStatus])
+  }, [totalScore, gameStatus, bombed])
 
   useEffect(() => {
     console.log('storing history in DB', scoreHistory);

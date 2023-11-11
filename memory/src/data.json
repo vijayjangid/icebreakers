@@ -1,4 +1,10 @@
 {
+    "random": [
+      { "id": "eyes", "content": "🎲" },
+      { "id": "ears", "content": "🎲" },
+      { "id": "mouth", "content": "🎲" },
+      { "id": "normal", "content": "🎲" }
+    ],
     "monkey face": [
       { "id": "eyes", "content": "🙈" },
       { "id": "ears", "content": "🙉" },
