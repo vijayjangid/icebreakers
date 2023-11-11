@@ -5,9 +5,6 @@
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="images/logo.png" alt="Logo" >
   </a>
-
-  <h3 align="center">Memory Game</h3>
-
   <p align="center">
     An awesome memory tile flipping game!
   </p>
