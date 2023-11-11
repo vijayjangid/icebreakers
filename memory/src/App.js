@@ -156,7 +156,7 @@ function App() {
   }, [tiles, bombed]);
 
   useEffect(() => {
-    if (gameStatus === GAME_STATUS.over) {
+    if (gameStatus === GAME_STATUS.over && (!bombed && totalScore === 100 || bombed)) {
       console.log('setting score history', totalScore, gameStatus);
       setScoreHistory(prev => Array.isArray(prev) ? [totalScore, ...prev].slice(0, 20) : [totalScore]);
     }
@@ -216,7 +216,7 @@ function App() {
                   <div className="card-inner">
                     <div className="card-front">{DEBUG ? x.content : "?"}</div>
                     <div className="card-back">
-                      <span>{bombed && x.bombed ? "🔥" : !bombed && x.bombed ? "🎉": x.content}</span>
+                      <span>{bombed && x.bombed ? "🔥" : !bombed && x.bombed ? "🎉" : x.content}</span>
                       <span className={`card-score`}>
                         {bombed && x.bombed
                           ? "0"
